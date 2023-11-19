@@ -1,6 +1,7 @@
 import Greet from "./components/Greet";
-import Person from "./components/Person";
-import PersonList from "./components/PersonList";
+import Heading from "./components/Heading";
+import Oscar from "./components/Oscar";
+import Status from "./components/Status";
 
 function App() {
   const personName = {
@@ -25,9 +26,12 @@ function App() {
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center">
-      <Greet name="Shidqi" isLoggedIn={true} messageCount={10} />
-      <Person name={personName} />
-      <PersonList names={nameList} />
+      <Greet name="Shidqi" isLoggedIn />
+      <Heading>Placeholder Text</Heading>
+      <Status status="success" />
+      <Oscar>
+        <Heading>Oscar goes to Leonardo DiCaprio!</Heading>
+      </Oscar>
     </div>
   );
 }

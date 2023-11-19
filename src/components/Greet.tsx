@@ -5,11 +5,11 @@ use types when you building application and use interface when you building libr
 
 type GreetProps = {
   name: string;
-  messageCount: number;
-  isLoggedIn: boolean; // optional props
+  messageCount?: number; // optional props
+  isLoggedIn: boolean; 
 };
 
-const Greet = ({ name, messageCount, isLoggedIn }: GreetProps) => {
+const Greet = ({ name, messageCount = 0, isLoggedIn }: GreetProps) => {
   return (
     <div>
       <h2>
