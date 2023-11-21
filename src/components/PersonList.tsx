@@ -1,8 +1,7 @@
+import { Name } from "./Person.types";
+
 type PersonListProps = {
-  names: {
-    first: string;
-    last: string;
-  }[];
+  names: Name[]; // array of objects that have the same structure as the Name type
 };
 
 const PersonList = ({ names }: PersonListProps) => {
