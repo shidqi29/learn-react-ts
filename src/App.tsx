@@ -1,5 +1,7 @@
+import Button from "./components/Button";
 import Greet from "./components/Greet";
 import Heading from "./components/Heading";
+import Input from "./components/Input";
 import Oscar from "./components/Oscar";
 import Status from "./components/Status";
 
@@ -26,12 +28,12 @@ function App() {
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center">
-      <Greet name="Shidqi" isLoggedIn />
-      <Heading>Placeholder Text</Heading>
-      <Status status="success" />
-      <Oscar>
-        <Heading>Oscar goes to Leonardo DiCaprio!</Heading>
-      </Oscar>
+      <Button
+        handleClick={(event, id) => {
+          console.log("Button clicked", event, id);
+        }}
+      />
+      <Input value="" handleChange={(event) => console.log(event)} />
     </div>
   );
 }
